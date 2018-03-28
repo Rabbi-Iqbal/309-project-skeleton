@@ -6,9 +6,10 @@
         <h1>Create new article</h1>
         <p>Title:</p>
         <input type ="text" id="title"/><br/><br/>
+        <p>Content</p>
         <textarea id="content"> Add content</textarea><br/><br/>
         <button id="submit">Submit</button>
-        <script src ="/lib/jquery/dist/jquery.min.js"</script>
+        <script src ="/lib/jquery/dist/jquery.min.js"> </script>
         <script>
         var newArticle = {title:"", content:""};
             $('#submit').click(function(){
@@ -21,7 +22,7 @@
                     url: "/api/articles",
                     data: newArticle
                     
-                }).done(function(response)){
+                }).done(function(response){
                     console.log(response);
                 }).fail(function(response){
                     console.log(response.responseText);
